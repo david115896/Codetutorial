@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Style.destroy_all
+Language.destroy_all
+
+Style.create(name: "Text")
+Style.create(name: "Chapter")
+Style.create(name: "Code")
+Style.create(name: "Image")
+Style.create(name: "Reference")
+
+Language.create(name: "Ruby on Rails")
+Language.create(name: "HTML")
+Language.create(name: "CSS")
+Language.create(name: "JS Vanilla")
+Language.create(name: "Jquery")
+Language.create(name: "Ajax")
+Language.create(name: "Python")
+
+puts "Styles and languages created"
