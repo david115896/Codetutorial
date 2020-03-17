@@ -3,7 +3,8 @@
                 <div class="input-group-prepend">
                         <span class="input-group-text"> Your image</span>
                 </div>
-                <%= f.text_field :text, placeholder: "Type the comment of your image", class: "form-control" %> 
+                <%= f.text_field :text, placeholder: "Type the comment of your image", class: "form-control" %>
+                <%= form.file_field :image, class: "form-control" %>
                 <%= f.hidden_field :style_id, :value => Style.find_by(name: "Image").id %>
 
                 <%= f.hidden_field :_destroy %>
