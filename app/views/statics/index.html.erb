@@ -2,7 +2,11 @@
 
 <div class="container text-center mt-5">
     <h1>All tutorials</h1>
+        <% if user_signed_in?%>
           <%= link_to 'Create a new tutorial', new_tuto_path, method: :get, class:"btn btn-outline-primary m-3" %>
+        <% else %>
+            <p> To create a new tutorial, please to log in </p>
+        <% end %>
 
     <table class="table">
         <thead>

@@ -18,7 +18,9 @@
                 <% elsif element.style.name == "Text"%>
                     <%=render "tutos/render_show/element_text", text: element.text %>
                 <% elsif element.style.name == "Code"%>
-                    <%=render "tutos/render_show/element_code", code: element.code, language: element.language_code %>  
+                    <%=render "tutos/render_show/element_code", code: element.code, language: element.language_code %> 
+                <% elsif element.style.name == "Image"%>
+                    <%=render "tutos/render_show/element_image", text: element.text, photo: element.image %> 
                 <% end%>
 
             <% end%>

@@ -89,7 +89,7 @@ end
     # Only allow a list of trusted parameters through.
     def tuto_params
       #params.fetch(:tuto, {})
-      params.require(:tuto).permit(:title, :language_ids, :elements_attributes => [:id, :text, :code, :style_id, :_destroy, :language_code, :language_text])
+      params.require(:tuto).permit(:title, :language_ids, :elements_attributes => [:id, :text, :code, :image, :style_id, :_destroy, :language_code, :language_text])
       #params.require(:tuto).permit(:title, :elements_attributes => Element.attribut_names.map(&:to_sym).push(:_destroy))
 
     end
