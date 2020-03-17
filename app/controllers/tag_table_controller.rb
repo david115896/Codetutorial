@@ -1,0 +1,2 @@
+class TagTableController < ApplicationController
+end

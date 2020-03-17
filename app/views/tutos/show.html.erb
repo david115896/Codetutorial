@@ -1,0 +1,39 @@
+<div class="container-fluid text-center mt-5">
+        <h1> <%= @tutorial.title%></h1>
+
+    <div class="row" >
+
+        <div class="col-3">
+        <h3> Chapters </h3>
+        <ul>
+            <% @chapters.each do |element|%>
+               <li> <%= element.text %> </li>
+            <% end%>
+        </ul>
+        </div>
+        <div class="col-6">
+            <% @elements.each do |element|%>
+                <% if element.style.name == "Chapter" %>
+                    <%=render "tutos/render_show/element_chapter", text: element.text %>  
+                <% elsif element.style.name == "Text"%>
+                    <%=render "tutos/render_show/element_text", text: element.text %>
+                <% elsif element.style.name == "Code"%>
+                    <%=render "tutos/render_show/element_code", code: element.code, language: element.language_code %>  
+                <% end%>
+
+            <% end%>
+
+            </br>
+
+            <%= link_to 'Edit', edit_tuto_path(@tutorial) %> |
+            <%= link_to 'Back', tutos_path %>
+        </div>
+        <div class="col-3">
+
+
+        </div>
+    </div>
+
+
+
+</div>

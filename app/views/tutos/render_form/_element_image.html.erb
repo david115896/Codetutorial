@@ -1,0 +1,13 @@
+<fieldset id="input">
+        <div class="input-group mb-5 mt-5">
+                <div class="input-group-prepend">
+                        <span class="input-group-text"> Your image</span>
+                </div>
+                <%= f.text_field :text, placeholder: "Type the comment of your image", class: "form-control" %> 
+                <%= f.hidden_field :style_id, :value => Style.find_by(name: "Image").id %>
+
+                <%= f.hidden_field :_destroy %>
+
+                <%= link_to "Remove this element", "#", class: "remove_fields btn btn-danger" %>
+        </div>
+</fieldset>

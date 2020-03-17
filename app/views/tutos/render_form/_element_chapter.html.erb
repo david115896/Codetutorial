@@ -1,0 +1,15 @@
+<fieldset>
+        <div class="input-group mt-5 mb-1">
+                <div class="input-group-prepend">
+                                <span class="input-group-text"> New chapter</span>
+                        </div>
+                        <%= f.text_field :text, placeholder: "Type the name of the new chapter", class: "form-control" %> 
+                        <%= f.hidden_field :style_id, :value => Style.find_by(name: "Chapter").id %>
+                        <%= f.hidden_field :language_text, :value => "French" %>
+
+                        <%= f.hidden_field :_destroy %>
+       </div>
+       <div>
+                <%= link_to "Remove this element", "#", class: "remove_fields btn btn-danger mb-3" %>
+       </div>
+</fieldset>

@@ -1,0 +1,42 @@
+<%=render "statics/jumbotron" %>
+
+<div class="container text-center mt-5">
+    <h1>All tutorials</h1>
+          <%= link_to 'Create a new tutorial', new_tuto_path, method: :get, class:"btn btn-outline-primary m-3" %>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Title</th>
+                <th scope="col">Languages</th>
+                <th scope="col">Tags</th>
+                <th scope="col">User</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @tutos.each.with_index do |tuto, index|  %>
+                <tr>
+                    <th scope="row"><%= index%></th>
+                    <td><%= tuto.title %> </td>
+                    <td><% tuto.language_tables.each do |line|%>
+                         <%= line.language.name %>,
+                        <%end%> </td>
+                    <td><%= tuto.tags.name %></td>
+                    <td><%= tuto.user.email %></td>
+                    <td><%= tuto.updated_at %></td>
+                    <td> <%= button_to 'Show ', tuto_path(tuto.id), method: :get, class:"btn btn-primary btn-lg" %></td>
+
+                    <td> <%= button_to 'Delete', tuto_path(tuto.id), method: :delete, class:"btn btn-danger btn-lg" %></td>
+
+
+
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+
+<% #relationgestion@macif.fr %>
+
+</div>

@@ -1,0 +1,10 @@
+<p> <%= get_style_name(builder.object[:style_id])%> </p>
+<% if get_style_name(builder.object[:style_id]) == "Chapter" %>
+    <%=render "tutos/render_form/element_chapter", f: builder %>
+<% elsif get_style_name(builder.object[:style_id]) == "Code" %>
+    <%=render "tutos/render_form/element_code", f: builder %>
+
+<% else%>
+    <%=render "tutos/render_form/element_chapter", f: builder %>
+
+<% end %>

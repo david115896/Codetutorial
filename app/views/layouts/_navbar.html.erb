@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-default bg-default sticky-top shadow mx-auto">
+  <%= link_to statics_path,class: 'navbar-brand ml-3' do %><span class='brand_title1'>Code Academy</span> <%end%>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse" id="navbar8">
+    <ul class="navbar-nav abs-center-x">
+      <li class="nav-item ">
+      </li>
+      <li class="nav-item ml-3 mr-3">
+      </li>
+      <li class="nav-item ">
+        
+      </li>
+    </ul>
+    </ul>
+    <ul class="navbar-nav ml-auto navbar_link">
+      <li class="nav-item dropdown login_dropdown ml-4">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <% if user_signed_in?%>
+            Dashboard 
+          <% else %>
+            Log <span class='login_title'>in</span>/<span class='login_title'>out</span> <i class="fas fa-sign-in-alt"></i>
+          <% end %>
+
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% if user_signed_in?%>
+            <%= link_to "Dashboard", statics_path, class:"dropdown-item" %>
+            <div class="dropdown-divider"></div>
+            <%= link_to('Log out',destroy_user_session_path, method: :delete,class: 'dropdown-item') %>
+      </li>
+          <% else %>
+            <%= link_to('Sign Up', new_user_registration_path,class:'dropdown-item') %>
+            <%= link_to('Login', new_user_session_path,class: 'dropdown-item')%>
+          <% end %>
+          </div>
+        </li>
+      </ul>
+    </div>
+</nav>
