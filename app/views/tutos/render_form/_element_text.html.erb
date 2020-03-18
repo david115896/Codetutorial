@@ -9,6 +9,30 @@
 
                 <%= f.hidden_field :_destroy %>
         </div>
+        <div class="div-markdown">
+                <p class="text-markdown">     To put a title : ### My title </br>
+                        To put a Horizontal Rule : --- </br>
+                        
+                        Text bold :  **rendered as bold text**  </br>
+                        Text italic: _rendered as italicized text_  </br>
+
+                        Text in bloquote : > My text in bloquote  </br>
+
+                        To make an unordered list :     + valid bullet  </br>
+                                                        + valid bullet  </br>
+                        To make an ordered list :       1. Lorem ipsum dolor sit amet  </br>
+                                                        1. Consectetur adipiscing elit   </br>
+                        To put a link :         [Name of my link](https://mylink.com/ "my link")  </br>
+
+                        To put a table :   </br>
+                        | Option | Description | </br>
+                        | ------ | ----------- |  </br>
+                        | data   | path to data files to supply the data that will be passed into templates. |  </br>
+                        | engine | engine to be used for processing templates. Handlebars is the default. |  </br>
+                        | ext    | extension to be used for dest files. |  </br>
+
+                </p>
+        </div>
         <div class="mb-5 mt-2">
                 <%= link_to "Remove this element", "#", class: "remove_fields btn btn-danger" %>
         </div>

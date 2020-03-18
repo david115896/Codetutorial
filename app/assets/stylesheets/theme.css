@@ -13,6 +13,12 @@ h2{
     font-size : 1.5rem;
 }
 
+h3{
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: 600;
+    font-size : 1.2rem;
+}
+
 .language-show{
     font-family: 'Baloo 2', cursive;
     font-weight: 400;
@@ -32,6 +38,11 @@ p{
 
 .col-chapter{
     font-family: 'Baloo Da 2', cursive;
+}
+
+.text-markdown{
+    font-family: 'Baloo Da 2', cursive;
+
 }
 
 /*------------- format  -----------------*/
@@ -81,6 +92,16 @@ p{
 
 }
 
+.div-markdown{
+    background-color:rgb(211, 211, 211);
+    padding: 10px 10px 10px 10px; 
+}
+
+.text-markdown{
+    font-size: 14px;
+    text-align: left;
+    background-color:rgb(211, 211, 211);
+}
 
 /*------------- manage moove  -----------------*/
 

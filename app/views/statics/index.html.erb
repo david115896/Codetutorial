@@ -30,7 +30,7 @@
                     <td><%= tuto.tags.name %></td>
                     <td><%= tuto.user.email %></td>
                     <td><%= tuto.updated_at %></td>
-                    <td> <%= button_to 'Show ', tuto_path(tuto.id), method: :get, class:"btn btn-primary btn-lg" %></td>
+                    <td> <%= button_to 'Show ', tuto_path(tuto.slug), method: :get, class:"btn btn-primary btn-lg" %></td>
 
                     <td> <%= button_to 'Delete', tuto_path(tuto.id), method: :delete, class:"btn btn-danger btn-lg" %></td>
 
