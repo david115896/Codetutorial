@@ -3,12 +3,12 @@
     <button class="btnc btnc--green"></button>
     <button class="btnc btnc--yellow"></button>
     <button class="btnc btnc--red"></button>
-    <span>HTML</span>
+    <span><%= text %></span>
   </div>
 </div>
 
-<code class="highlight line-%i text-left">
+<code class="highlight line-%i text-left mb-3">
 
-    <%= raw rouge(code, "ruby") %>
+    <%= raw rouge(code, language) %>
 
 </code>

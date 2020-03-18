@@ -1,14 +1,15 @@
 <fieldset id="input">
-        <div class="input-group mb-5 mt-5">
+        <div class="input-group">
                 <div class="input-group-prepend">
                         <span class="input-group-text"> Your text</span>
                 </div>
-                <%= f.text_area :text, placeholder: "Type your text", class: "form-control" %> 
+                <%= f.text_area :text, placeholder: "Type your text", class: "form-control", :size =>"25x10"%> 
                 <%= f.hidden_field :style_id, :value => Style.find_by(name: "Text").id %>
                 <%= f.hidden_field :language_text, :value => "French" %>
 
                 <%= f.hidden_field :_destroy %>
-
+        </div>
+        <div class="mb-5 mt-2">
                 <%= link_to "Remove this element", "#", class: "remove_fields btn btn-danger" %>
         </div>
 </fieldset>

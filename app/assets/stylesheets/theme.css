@@ -1,0 +1,96 @@
+/*------------- fonts  -----------------*/
+
+h1{
+    font-family: 'Baloo 2', cursive;
+    font-weight: 800;
+    font-size : 32px;
+    line-height: 40px;
+}
+
+h2{
+    font-family: 'Baloo 2', cursive;
+    font-weight: 600;
+    font-size : 1.5rem;
+}
+
+.language-show{
+    font-family: 'Baloo 2', cursive;
+    font-weight: 400;
+    font-size : 1rem;
+    font-weight: bold;
+    color: rgb(153, 153, 153);
+}
+
+.text-grey{
+    color: rgb(64, 83, 121);
+    font-size: 0.9rem;
+}
+
+p{
+    font-family: 'Baloo Da 2', cursive;
+}
+
+.col-chapter{
+    font-family: 'Baloo Da 2', cursive;
+}
+
+/*------------- format  -----------------*/
+
+p{
+    font-size : 18px;
+}
+
+.language-tag{
+    border : solid ;
+    border-color: rgb(0, 105, 255);
+    background-color: rgb(243, 245, 249);
+    color : rgb(0, 105, 255);
+    padding: 3px;
+    text-align: center;
+    margin: 2px;
+    font-size : 0.9rem;
+}
+
+.author{
+    font-size : 16px;
+    font-weight: bold;
+    text-align: left;
+
+}
+
+.chapter{
+    font-size: 26px;
+    font-weight: 600;
+    margin-left: 5%;
+}
+
+.element-text{
+    text-align: justify;
+}
+
+.col-chapter{
+    padding-top: 5%;
+    padding-left: 7%;
+    text-align: left;
+}
+
+.chapter-link{
+    color: rgb(64, 83, 121);
+    line-height: 50px;
+
+
+}
+
+
+/*------------- manage moove  -----------------*/
+
+html {
+	scroll-behavior: smooth; 
+}
+
+.fixed {
+    position: fixed;
+    top: 15%;
+    width: 200px;
+  }
+  

@@ -1,19 +1,23 @@
 <fieldset>
-        <div class="input-group mt-5 mb-1">
+<div class="form-check-inline w-100">
+        <%= f.text_field :text, placeholder: "Type the tree of your code like : # app/views/user/show.html.erb", class: "form-control" %> 
+        <%= f.collection_select :language_code, Language.all, :rouge_name, :name,{multiple: true, validate: true, :include_blank => "Please select the language of your code"}, class: 'form-control width-drop' %> 
+</div>
+        <div class="input-group mb-1">
+
                 <div class="input-group-prepend">
                                 <span class="input-group-text"> Your code</span>
                         </div>
 
-                        <%= f.text_area :code, placeholder: "Type your code", class: "form-control bg-dark" %> 
-                        <%= f.text_field :text, placeholder: "Type the tree of your code", class: "form-control bg-dark" %> 
+                        <%= f.text_area :code, placeholder: "Type your code", class: "form-control ", :size =>"25x10" %> 
+                </div>
 
                         <%= f.hidden_field :style_id, :value => Style.find_by(name: "Code").id %>
 
                         <%= f.hidden_field :_destroy %>
 
-       </div>
+       
        <div>
-                <%= f.collection_select :language_code, Language.all, :name, :name,{multiple: true, validate: true, :include_blank => "Please select the language of your code"}, class: 'form-control width-drop w-50 mb-2' %> 
                 <%= link_to "Remove this element", "#", class: "remove_fields btn btn-danger mb-3" %>
        </div>
 </fieldset>

@@ -9,6 +9,7 @@ class TutosController < ApplicationController
   def show
     @elements = Element.where(tuto_id: @tutorial)
     @chapters = Element.where(style: Style.find_by(name: "Chapter"))
+    @language_tables = LanguageTable.where(tuto: @tutorial)
 
   end
 

@@ -1,24 +1,38 @@
 <div class="container-fluid text-center mt-5">
-        <h1> <%= @tutorial.title%></h1>
+        
 
     <div class="row" >
-
-        <div class="col-3">
-        <h3> Chapters </h3>
-        <ul>
+        <div class="col-3 col-chapter font-weight-bold">
+        <div class="fixed">
+            <p> Chapters : </p>
             <% @chapters.each do |element|%>
-               <li> <%= element.text %> </li>
+                <%= link_to element.text, tuto_path(@tutorial, anchor: element.id), class:"chapter-link" %>
+                </br>
             <% end%>
-        </ul>
+            </div>
         </div>
         <div class="col-6">
+            <p class="language-show text-right"> Language : English </p>
+
+            <h1> <%= @tutorial.title%></h1>
+
+            <p class="text-left d-inline text-grey "> Updated <%= @tutorial.updated_at.strftime("%B %d, %Y")%>
+                <% @language_tables.each do |language_table| %>
+                    <p class="language-tag d-inline"> <%= language_table.language.name %> </p>
+                <% end %>
+            </p>
+
+            <p class="author mb-5"> By <%= @tutorial.user.first_name %>  <%= @tutorial.user.last_name %>, </br> <%= link_to 'Create your own tutorial', new_tuto_path %> </p>
+
+
+
             <% @elements.each do |element|%>
                 <% if element.style.name == "Chapter" %>
-                    <%=render "tutos/render_show/element_chapter", text: element.text %>  
+                    <%=render "tutos/render_show/element_chapter", text: element.text, id: element.id %>  
                 <% elsif element.style.name == "Text"%>
                     <%=render "tutos/render_show/element_text", text: element.text %>
                 <% elsif element.style.name == "Code"%>
-                    <%=render "tutos/render_show/element_code", code: element.code, language: element.language_code %> 
+                    <%=render "tutos/render_show/element_code", code: element.code, language: element.language_code, text: element.text %> 
                 <% elsif element.style.name == "Image"%>
                     <%=render "tutos/render_show/element_image", text: element.text, photo: element.image %> 
                 <% end%>
