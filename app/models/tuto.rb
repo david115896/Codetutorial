@@ -12,6 +12,9 @@ class Tuto < ApplicationRecord
     #accepts_nested_attributes_for :elements, allow_destroy: true #reject_if: proc {|att| att['name'].blank? }, reject_if: :all_blank
     accepts_nested_attributes_for :elements, :reject_if => :reject_tour, :allow_destroy => true
 
+    extend FriendlyId
+    friendly_id :title, use: :slugged
+
     def reject_tour(attributes)
         exists = attributes['text'].present?
         #empty = attributes.slice(:when, :where).values.all?(&:blank?)

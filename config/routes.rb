@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   resources :tutos do
     collection { post :add_text, :add_code, :add_image}
   end
+
   devise_for :users
+  resources :users, except:[:new, :create]
+
   resources :statics
   root to: "statics#index"
 

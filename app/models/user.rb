@@ -6,5 +6,12 @@ class User < ApplicationRecord
   has_many :tutos
   has_many :comments
 
+  extend FriendlyId
+  friendly_id :pseudo, use: :slugged
+
+  def should_generate_new_friendly_id?
+    new_record?
+  end
+
 
 end

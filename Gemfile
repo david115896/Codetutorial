@@ -65,7 +65,6 @@ gem 'faker'
 gem 'table_print'
 gem 'dotenv-rails'
 gem 'devise'
-gem 'dotenv-rails'
 gem 'jquery-rails'
 gem 'pry'
 gem 'better_errors'
@@ -80,6 +79,6 @@ gem 'gon' #used to manage transfert variable bewteen ruby and JS
 gem 'httparty' #used to get duration from google map distance matrix
 gem 'redcarpet' #used to use markdown
 gem 'rouge' #used to use highlight code
-gem 'jquery-rails'
+gem 'friendly_id' #used to have pretty urls
 
 
