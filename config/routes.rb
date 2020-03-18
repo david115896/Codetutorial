@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  #get 'site_maps/index'
+  resources :statics
+  root to: "statics#index"
+
+  devise_for :users
+  resources :users, except:[:new, :create]
 
   resources :styles
   resources :tags
@@ -12,11 +18,7 @@ Rails.application.routes.draw do
     collection { post :add_text, :add_code, :add_image}
   end
 
-  devise_for :users
-  resources :users, except:[:new, :create]
+  get '/sitemap' => 'site_maps#index'
+  #resources :styles
 
-  resources :statics
-  root to: "statics#index"
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -80,5 +80,6 @@ gem 'httparty' #used to get duration from google map distance matrix
 gem 'redcarpet' #used to use markdown
 gem 'rouge' #used to use highlight code
 gem 'friendly_id' #used to have pretty urls
+gem 'meta-tags' #used to manage meta-tags for SEO
 
 

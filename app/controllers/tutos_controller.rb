@@ -11,6 +11,14 @@ class TutosController < ApplicationController
     @chapters = Element.where(style: Style.find_by(name: "Chapter"))
     @language_tables = LanguageTable.where(tuto: @tutorial)
 
+    prepare_meta_tags(
+      title: @tutorial.title,
+      description: Element.where(tuto: @tutorial, style: Style.find_by(name:"Text")).first.text,
+      keywords: @tutorial.tags,
+      #image: @product.picture.url(:large),
+      #twitter: {card: "summary_large_image"}
+    )
+
   end
 
   def new
