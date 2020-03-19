@@ -81,5 +81,5 @@ gem 'redcarpet' #used to use markdown
 gem 'rouge' #used to use highlight code
 gem 'friendly_id' #used to have pretty urls
 gem 'meta-tags' #used to manage meta-tags for SEO
-
+gem 'aws-sdk' #gem aws to run production in local
 
