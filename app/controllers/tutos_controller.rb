@@ -1,5 +1,6 @@
 class TutosController < ApplicationController
   before_action :set_tuto, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user, only: [:new, :edit, :destroy]
 
 
   def index
