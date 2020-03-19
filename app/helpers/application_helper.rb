@@ -5,7 +5,7 @@ module ApplicationHelper
         fields = f.fields_for(association, new_object, child_index: id) do |builder|
           render('tutos/render_form/element_chapter', f: builder)
         end
-        link_to(name, '#', class: "add_chapter btn btn-primary", data: {id: id, fields: fields.gsub("\n", "")})
+        link_to(name, '#', class: "add_chapter btn btn-sm btn-outline-primary", data: {id: id, fields: fields.gsub("\n", "")})
     end
 
     def link_to_add_code(name, f, association)
@@ -14,7 +14,7 @@ module ApplicationHelper
       fields = f.fields_for(association, new_object, child_index: id) do |builder|
         render('tutos/render_form/element_code', f: builder)
       end
-      link_to(name, '#', class: "add_code btn btn-primary", data: {id: id, fields: fields.gsub("\n", "")})
+      link_to(name, '#', class: "add_code btn btn-sm btn-outline-primary", data: {id: id, fields: fields.gsub("\n", "")})
   end
 
   def link_to_add_text(name, f, association)
@@ -23,7 +23,7 @@ module ApplicationHelper
     fields = f.fields_for(association, new_object, child_index: id) do |builder|
       render('tutos/render_form/element_text', f: builder)
     end
-    link_to(name, '#', class: "add_text btn btn-primary", data: {id: id, fields: fields.gsub("\n", "")})
+    link_to(name, '#', class: "add_text btn btn-sm btn-outline-primary", data: {id: id, fields: fields.gsub("\n", "")})
   end
 
   def link_to_add_image(name, f, association)
@@ -32,7 +32,7 @@ module ApplicationHelper
     fields = f.fields_for(association, new_object, child_index: id) do |builder|
       render('tutos/render_form/element_image', f: builder)
     end
-    link_to(name, '#', class: "add_image btn btn-primary", data: {id: id, fields: fields.gsub("\n", "")})
+    link_to(name, '#', class: "add_image btn btn-sm btn-outline-primary", data: {id: id, fields: fields.gsub("\n", "")})
   end
 
   def link_to_add_reference(name, f, association)
@@ -41,6 +41,6 @@ module ApplicationHelper
     fields = f.fields_for(association, new_object, child_index: id) do |builder|
       render('tutos/render_form/element_reference', f: builder)
     end
-    link_to(name, '#', class: "add_reference btn btn-primary", data: {id: id, fields: fields.gsub("\n", "")})
+    link_to(name, '#', class: "add_reference btn btn-sm btn-outline-primary", data: {id: id, fields: fields.gsub("\n", "")})
   end
 end
