@@ -1,32 +1,68 @@
-<div class="container text-center mt-5">
+<div class="container-fluid text-center mt-5">
+    <div class="row">
+        <div class="col-3">
 
-    <h1>Create a new Tutorial</h1>
-
-    <%= form_for @tutorial do |form| %>
-        <div class="form-group">
-            <div class="input-group mb-5 mt-5">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="title">Title of your tutorial</span>
-                </div>
-                <%= form.text_field :title, autocomplete: "title", class: "form-control" %>
-            </div>     
-            <div class="field ">
-                <%= form.label "Which languages are concerns ?", class:"h4 m-3" %><br />
-                <%= form.collection_check_boxes :language_ids, Language.all, :id, :name do |b| %>
-                    <div class="collection-check-box d-inline ">
-                        <%= b.check_box%>
-                        <%= b.label %>
-                    </div>
-                <% end %>
-            </div>
-
-            <%=render "tutos/render_form/buttons_add_elements", form: form %>                             
-
-            <div class="actions w-50 mt-5 mb-4 ">
-                <%= form.submit "Save this tutorial", data: { "disable-with": "Saving..." }, class:"btn btn-md btn-primary btn-block text-uppercase" %>
-            </div>
         </div>
-    <% end %>
+        <div class="col-6">
+            <h1>Create a new Tutorial</h1>
 
+            <%= form_for @tutorial do |form| %>
+                <div class="form-group">
+                    <div class="input-group mb-5 mt-5">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="title">Title of your tutorial</span>
+                        </div>
+                        <%= form.text_field :title, autocomplete: "title", class: "form-control", required: true %>
+                    </div>     
+                    <div class="field ">
+                        <%= form.label "Which languages are concerns ?", class:"h4 m-3" %><br />
+                        <%= form.collection_check_boxes :language_ids, Language.all, :id, :name do |b| %>
+                            <div class="collection-check-box d-inline ">
+                                <%= b.check_box%>
+                                <%= b.label %>
+                            </div>
+                        <% end %>
+                    </div>
+
+                    <%=render "tutos/render_form/buttons_add_elements", fo: form %>      
     
+
+                    <div class="actions w-50 mt-5 mb-4 ">
+                        <%= form.submit "Save this tutorial", data: { "disable-with": "Saving..." }, class:"btn btn-md btn-primary btn-block text-uppercase" %>
+                    </div>
+                </div>
+            <% end %>
+
+        </div>
+        <div class="col-3 pr-5">
+            <div class="div-markdown fixed w-400">
+                <p class="text-markdown">
+                        <strong>  How to use markdown to right text </strong> </br>
+                        To put a title : ### My title </br>
+                        To put a Horizontal Rule : --- </br>
+                        
+                        Text bold :  **rendered as bold text**  </br>
+                        Text italic: _rendered as italicized text_  </br>
+
+                        Text in bloquote : > My text in bloquote  </br>
+
+                        To make an unordered list :     + valid bullet  </br>
+                                                        + valid bullet  </br>
+                        To make an ordered list :       1. Lorem ipsum dolor sit amet  </br>
+                                                        1. Consectetur adipiscing elit   </br>
+                        To put a link :         [Name of my link](https://mylink.com/ "my link")  </br>
+
+                        To put a table :   </br>
+                        | Option | Description | </br>
+                        | ------ | ----------- |  </br>
+                        | data   | path to data files to supply the data that will be passed into templates. |  </br>
+                        | engine | engine to be used for processing templates. Handlebars is the default. |  </br>
+                        | ext    | extension to be used for dest files. |  </br>
+
+                </p>
+            </div>
+
+        </div>
+
+    </div>
 </div>

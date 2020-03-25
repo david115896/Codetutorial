@@ -1,14 +1,14 @@
 <fieldset>
-        <div class="input-group mt-5 mb-1">
+        <div class="input-group mb-3">
                 <div class="input-group-prepend">
                                 <span class="input-group-text"> New reference</span>
                         </div>
-                        <%= f.text_field :text, placeholder: "Type the name of your reference", class: "form-control" %> 
+                        <%= f.text_field :text, placeholder: "Type the name of your reference", class: "form-control", required: true %> 
                         <%= f.hidden_field :style_id, :value => Style.find_by(name: "Reference").id %>
 
                         <%= f.hidden_field :_destroy %>
-       </div>
-       <div>
-                <%= link_to "Remove this element", "#", class: "remove_fields btn btn-danger mb-3" %>
+                        <%= link_to( :class => "class") do %>
+                                <i class="fas fa-trash-alt fa-2x ml-3 remove_fields red" style="color:red"></i>
+                        <% end %>
        </div>
 </fieldset>

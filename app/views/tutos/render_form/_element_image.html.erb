@@ -1,13 +1,15 @@
 <fieldset id="input">
-        <div class="input-group mb-2">
+        <div class="input-group mb-3">
                 <div class="input-group-prepend">
                         <span class="input-group-text"> Your image</span>
                 </div>
-                <%= f.text_area :text, placeholder: "Type your text", class: "form-control", :size =>"25x10" %>
-                <%= f.file_field :image, class: "form-control" %>
+                <%= f.text_area :text, placeholder: "Type your text", class: "form-control", :size =>"25x5", required: true %>
+                <%= f.file_field :image, class: "form-control", required: true %>
                 <%= f.hidden_field :style_id, :value => Style.find_by(name: "Image").id %>
 
                 <%= f.hidden_field :_destroy %>
+                <%= link_to( :class => "class") do %>
+                        <i class="fas fa-trash-alt fa-2x ml-3 remove_fields red" style="color:red"></i>
+                <% end %>
         </div>
-                <%= link_to "Remove this element", "#", class: "remove_fields btn btn-danger mb-5" %>
 </fieldset>

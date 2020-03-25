@@ -15,6 +15,7 @@ Style.create(name: "Image")
 Style.create(name: "Reference")
 
 Language.create(name: "Ruby on Rails", rouge_name: "erb")
+Language.create(name: "Shell", rouge_name: "shell")
 Language.create(name: "Ruby", rouge_name: "ruby")
 Language.create(name: "HTML", rouge_name: "html")
 Language.create(name: "CSS", rouge_name: "css")
@@ -23,5 +24,6 @@ Language.create(name: "JS Vanilla", rouge_name: "javascript")
 Language.create(name: "Jquery", rouge_name: "javascript")
 Language.create(name: "Ajax", rouge_name: "javascript")
 Language.create(name: "Python", rouge_name: "python")
+
 
 puts "Styles and languages created"

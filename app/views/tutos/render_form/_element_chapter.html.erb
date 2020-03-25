@@ -1,15 +1,15 @@
 <fieldset>
-        <div class="input-group mt-5 mb-1">
+        <div class="input-group mt-5 mb-3">
                 <div class="input-group-prepend">
-                                <span class="input-group-text"> New chapter</span>
-                        </div>
-                        <%= f.text_field :text, placeholder: "Type the name of the new chapter", class: "form-control" %> 
-                        <%= f.hidden_field :style_id, :value => Style.find_by(name: "Chapter").id %>
-                        <%= f.hidden_field :language_text, :value => "French" %>
+                        <span class="input-group-text"> New chapter</span>
+                </div>
+                <%= f.text_field :text, placeholder: "Type the name of the new chapter", class: "form-control", required: true %> 
+                <%= f.hidden_field :style_id, :value => Style.find_by(name: "Chapter").id %>
+                <%= f.hidden_field :language_text, :value => "French" %>
 
-                        <%= f.hidden_field :_destroy %>
-       </div>
-       <div>
-                <%= link_to "Remove this element", "#", class: "remove_fields btn btn-danger mb-3" %>
+                <%= f.hidden_field :_destroy %>
+                <%= link_to( :class => "class") do %>
+                        <i class="fas fa-trash-alt fa-2x ml-3 remove_fields red" style="color:red"></i>
+                <% end %>
        </div>
 </fieldset>
