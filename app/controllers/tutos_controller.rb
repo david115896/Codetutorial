@@ -9,7 +9,7 @@ class TutosController < ApplicationController
 
   def show
     @elements = Element.where(tuto_id: @tutorial)
-    @chapters = Element.where(style: Style.find_by(name: "Chapter"))
+    @chapters = Element.where(style: Style.find_by(name: "Chapter"), tuto_id: @tutorial)
     @language_tables = LanguageTable.where(tuto: @tutorial)
 
     prepare_meta_tags(
