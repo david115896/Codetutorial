@@ -51,6 +51,11 @@ p{
     font-size : 18px;
 }
 
+table, th, td{
+    border: 1px solid black;
+    padding : 10px;
+}
+
 .language-tag{
     border : solid ;
     border-color: rgb(0, 105, 255);
